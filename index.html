@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>HOME PAGE</title>
+</head>
+<body>
+
+
+
+    <div id="calculator">
+        <input id="calc-input">
+        <button onclick="calculatorButtons('+')">+</button>
+        <button onclick="calculatorButtons('-')">-</button>
+        <button onclick="calculatorButtons('*')">*</button>
+        <button onclick="calculatorButtons('/')">/</button>
+
+        <button onclick="calculatorButtons('7')">7</button>
+        <button onclick="calculatorButtons('8')">8</button>
+        <button onclick="calculatorButtons('9')">9</button>
+        <button id="calc-button-del" onclick="calculatorButtons('del')"><<</button>
+ 
+        <button onclick="calculatorButtons('4')">4</button>
+        <button onclick="calculatorButtons('5')">5</button>
+        <button onclick="calculatorButtons('6')">6</button>
+
+        <button onclick="calculatorButtons('1')">1</button>
+        <button onclick="calculatorButtons('2')">2</button>
+        <button onclick="calculatorButtons('3')">3</button>
+        <button onclick="calculatorButtons('c')">C</button>
+
+        <button onclick="calculatorButtons('.')">.</button>
+        <button onclick="calculatorButtons('0')">0</button>
+        <button id="calc-button-result" onclick="calculatorButtons('result')">=</button>
+    </div>
+
+
+
+    <div id="cross-multiplication">
+        <div class="cross-multi-sections">
+            <input oninput="crossMultiplication('a', this.value)" type="number" placeholder="A">
+            <label>>>></label>
+            <input oninput="crossMultiplication('b', this.value)" type="number" placeholder="B">
+        </div>
+
+        <label></label>
+        
+        <div class="cross-multi-sections">
+            <input oninput="crossMultiplication('c', this.value)" type="number" placeholder="C">
+            <label>>>></label>
+            <labe id="cross-multi-result">X</labe>
+        </div>
+    </div>
+
+
+
+    <div id="translator">
+        <div class="translator-sections">
+            <input id="translator-input-from" type="text">
+            <button onclick="translator(1)">TRADUZIR</button>
+            <input id="translator-input-to" type="text" disabled>
+        </div>
+        
+        <div class="translator-sections">
+            <select id="translator-select-lang-from">
+                <option value="en-GB">English</option>
+                <option value="pt-PT" selected>Portuguese</option>
+                <option value="es-ES">Spanish</option>
+                <option value="ja-JP">Japanese</option>
+                <option value="la-VA">Latin</option>
+                <option value="ru-RU">Russian</option>
+                <option value="de-DE">German</option>
+                <option value="fr-FR">French</option>
+                <option value="sv-SE">Swedish</option>
+                <option value="hi-IN">Hindi</option>
+                <option value="it-IT">Italian</option>
+                <option value="he-IL">Hebrew</option>
+                <option value="nl-NL">Dutch</option>
+                <option value="am-ET">Amharic</option>
+                <option value="ar-SA">Arabic</option>
+                <option value="be-BY">Bielarus</option>
+                <option value="bem-ZM">Bemba</option>
+                <option value="bi-VU">Bislama</option>
+                <option value="bjs-BB">Bajan</option>
+                <option value="bn-IN">Bengali</option>
+                <option value="bo-CN">Tibetan</option>
+                <option value="br-FR">Breton</option>
+                <option value="bs-BA">Bosnian</option>
+                <option value="ca-ES">Catalan</option>
+                <option value="cop-EG">Coptic</option>
+                <option value="cs-CZ">Czech</option>
+                <option value="cy-GB">Welsh</option>
+                <option value="da-DK">Danish</option>
+                <option value="dz-BT">Dzongkha</option>
+                <option value="dv-MV">Maldivian</option>
+                <option value="el-GR">Greek</option>
+                <option value="et-EE">Estonian</option>
+                <option value="eu-ES">Basque</option>
+                <option value="fa-IR">Persian</option>
+                <option value="fi-FI">Finnish</option>
+                <option value="fn-FNG">Fanagalo</option>
+                <option value="fo-FO">Faroese</option>
+                <option value="gl-ES">Galician</option>
+                <option value="gu-IN">Gujarati</option>
+                <option value="ha-NE">Hausa</option>
+                <option value="hr-HR">Croatian</option>
+                <option value="hu-HU">Hungarian</option>
+                <option value="id-ID">Indonesian</option>
+                <option value="is-IS">Icelandic</option>
+                <option value="kk-KZ">Kazakh</option>
+                <option value="km-KM">Khmer</option>
+                <option value="kn-IN">Kannada</option>
+                <option value="ko-KR">Korean</option>
+                <option value="ku-TR">Kurdish</option>
+                <option value="ky-KG">Kyrgyz</option>
+                <option value="lo-LA">Lao</option>
+                <option value="lv-LV">Latvian</option>
+                <option value="men-SL">Mende</option>
+                <option value="mg-MG">Malagasy</option>
+                <option value="mi-NZ">Maori</option>
+                <option value="ms-MY">Malay</option>
+                <option value="mt-MT">Maltese</option>
+                <option value="my-MM">Burmese</option>
+                <option value="ne-NP">Nepali</option>
+                <option value="niu-NU">Niuean</option>
+                <option value="no-NO">Norwegian</option>
+                <option value="ny-MW">Nyanja</option>
+                <option value="ur-PK">Pakistani</option>
+                <option value="pau-PW">Palauan</option>
+                <option value="pa-IN">Panjabi</option>
+                <option value="ps-PK">Pashto</option>
+                <option value="pis-SB">Pijin</option>
+                <option value="pl-PL">Polish</option>
+                <option value="rn-BI">Kirundi</option>
+                <option value="ro-RO">Romanian</option>
+                <option value="sg-CF">Sango</option>
+                <option value="si-LK">Sinhala</option>
+                <option value="sk-SK">Slovak</option>
+                <option value="sm-WS">Samoan</option>
+                <option value="sn-ZW">Shona</option>
+                <option value="so-SO">Somali</option>
+                <option value="sq-AL">Albanian</option>
+                <option value="sr-RS">Serbian</option>
+                <option value="sw-SZ">Swahili</option>
+                <option value="ta-LK">Tamil</option>
+                <option value="te-IN">Telugu</option>
+                <option value="tet-TL">Tetum</option>
+                <option value="tg-TJ">Tajik</option>
+                <option value="th-TH">Thai</option>
+                <option value="ti-TI">Tigrinya</option>
+                <option value="tk-TM">Turkmen</option>
+                <option value="tl-PH">Tagalog</option>
+                <option value="tn-BW">Tswana</option>
+                <option value="to-TO">Tongan</option>
+                <option value="tr-TR">Turkish</option>
+                <option value="uk-UA">Ukrainian</option>
+                <option value="uz-UZ">Uzbek</option>
+                <option value="vi-VN">Vietnamese</option>
+                <option value="wo-SN">Wolof</option>
+                <option value="xh-ZA">Xhosa</option>
+                <option value="yi-YD">Yiddish</option>
+                <option value="zu-ZA">Zulu</option>
+            </select>
+            <button onclick="translator(2)">>><<</button>
+            <select id="translator-select-lang-to">
+                <option value="en-GB" selected>English</option>
+                <option value="pt-PT">Portuguese</option>
+                <option value="es-ES">Spanish</option>
+                <option value="ja-JP">Japanese</option>
+                <option value="la-VA">Latin</option>
+                <option value="ru-RU">Russian</option>
+                <option value="de-DE">German</option>
+                <option value="fr-FR">French</option>
+                <option value="sv-SE">Swedish</option>
+                <option value="hi-IN">Hindi</option>
+                <option value="it-IT">Italian</option>
+                <option value="he-IL">Hebrew</option>
+                <option value="nl-NL">Dutch</option>
+                <option value="am-ET">Amharic</option>
+                <option value="ar-SA">Arabic</option>
+                <option value="be-BY">Bielarus</option>
+                <option value="bem-ZM">Bemba</option>
+                <option value="bi-VU">Bislama</option>
+                <option value="bjs-BB">Bajan</option>
+                <option value="bn-IN">Bengali</option>
+                <option value="bo-CN">Tibetan</option>
+                <option value="br-FR">Breton</option>
+                <option value="bs-BA">Bosnian</option>
+                <option value="ca-ES">Catalan</option>
+                <option value="cop-EG">Coptic</option>
+                <option value="cs-CZ">Czech</option>
+                <option value="cy-GB">Welsh</option>
+                <option value="da-DK">Danish</option>
+                <option value="dz-BT">Dzongkha</option>
+                <option value="dv-MV">Maldivian</option>
+                <option value="el-GR">Greek</option>
+                <option value="et-EE">Estonian</option>
+                <option value="eu-ES">Basque</option>
+                <option value="fa-IR">Persian</option>
+                <option value="fi-FI">Finnish</option>
+                <option value="fn-FNG">Fanagalo</option>
+                <option value="fo-FO">Faroese</option>
+                <option value="gl-ES">Galician</option>
+                <option value="gu-IN">Gujarati</option>
+                <option value="ha-NE">Hausa</option>
+                <option value="hr-HR">Croatian</option>
+                <option value="hu-HU">Hungarian</option>
+                <option value="id-ID">Indonesian</option>
+                <option value="is-IS">Icelandic</option>
+                <option value="kk-KZ">Kazakh</option>
+                <option value="km-KM">Khmer</option>
+                <option value="kn-IN">Kannada</option>
+                <option value="ko-KR">Korean</option>
+                <option value="ku-TR">Kurdish</option>
+                <option value="ky-KG">Kyrgyz</option>
+                <option value="lo-LA">Lao</option>
+                <option value="lv-LV">Latvian</option>
+                <option value="men-SL">Mende</option>
+                <option value="mg-MG">Malagasy</option>
+                <option value="mi-NZ">Maori</option>
+                <option value="ms-MY">Malay</option>
+                <option value="mt-MT">Maltese</option>
+                <option value="my-MM">Burmese</option>
+                <option value="ne-NP">Nepali</option>
+                <option value="niu-NU">Niuean</option>
+                <option value="no-NO">Norwegian</option>
+                <option value="ny-MW">Nyanja</option>
+                <option value="ur-PK">Pakistani</option>
+                <option value="pau-PW">Palauan</option>
+                <option value="pa-IN">Panjabi</option>
+                <option value="ps-PK">Pashto</option>
+                <option value="pis-SB">Pijin</option>
+                <option value="pl-PL">Polish</option>
+                <option value="rn-BI">Kirundi</option>
+                <option value="ro-RO">Romanian</option>
+                <option value="sg-CF">Sango</option>
+                <option value="si-LK">Sinhala</option>
+                <option value="sk-SK">Slovak</option>
+                <option value="sm-WS">Samoan</option>
+                <option value="sn-ZW">Shona</option>
+                <option value="so-SO">Somali</option>
+                <option value="sq-AL">Albanian</option>
+                <option value="sr-RS">Serbian</option>
+                <option value="sw-SZ">Swahili</option>
+                <option value="ta-LK">Tamil</option>
+                <option value="te-IN">Telugu</option>
+                <option value="tet-TL">Tetum</option>
+                <option value="tg-TJ">Tajik</option>
+                <option value="th-TH">Thai</option>
+                <option value="ti-TI">Tigrinya</option>
+                <option value="tk-TM">Turkmen</option>
+                <option value="tl-PH">Tagalog</option>
+                <option value="tn-BW">Tswana</option>
+                <option value="to-TO">Tongan</option>
+                <option value="tr-TR">Turkish</option>
+                <option value="uk-UA">Ukrainian</option>
+                <option value="uz-UZ">Uzbek</option>
+                <option value="vi-VN">Vietnamese</option>
+                <option value="wo-SN">Wolof</option>
+                <option value="xh-ZA">Xhosa</option>
+                <option value="yi-YD">Yiddish</option>
+                <option value="zu-ZA">Zulu</option>
+            </select>
+        </div>
+    </div>
+
+
+
+    <div id="time">
+        <div id="clock">
+            <div id="clock-center"></div>
+            <div class="clock-pointer" id="clock-pointer-h"></div>
+            <div class="clock-pointer" id="clock-pointer-m"></div>
+            <div class="clock-pointer" id="clock-pointer-s"></div>
+
+            <div class="clock-num" id="clock-num-1">1</div>
+            <div class="clock-num" id="clock-num-2">2</div>
+            <div class="clock-num" id="clock-num-3">3</div>
+            <div class="clock-num" id="clock-num-4">4</div>
+            <div class="clock-num" id="clock-num-5">5</div>
+            <div class="clock-num" id="clock-num-6">6</div>
+            <div class="clock-num" id="clock-num-7">7</div>
+            <div class="clock-num" id="clock-num-8">8</div>
+            <div class="clock-num" id="clock-num-9">9</div>
+            <div class="clock-num" id="clock-num-10">10</div>
+            <div class="clock-num" id="clock-num-11">11</div>
+            <div class="clock-num" id="clock-num-12">12</div>
+        </div>
+
+        <div id="full-date">
+            <label id="full-date-hours">00:00:00</label>
+            <label id="full-date-month">Quarta feira, 0 de </label>
+            <label id="full-date-date">00/00/000</label>
+        </div>
+    </div>
+
+
+
+    <div id="search">
+        <label>Buscar por <input id="search-input" type="text" spellcheck="false"> em:</label> 
+
+        <div id="search-sites">
+            <a href="https://www.google.com/search?q=" target="_blank">
+                <img src="logos/google_logo.svg">
+                <p>Google</p>
+            </a>
+            <a href="https://www.youtube.com/results?search_query=" target="_blank">
+                <img src="logos/youtube_logo.svg">
+                <p>Youtube</p>
+            </a>
+            <a href="https://pt.wikipedia.org/w/index.php?search=" target="_blank">
+                <img src="logos/wikipedia_logo.svg">
+                <p>Wikipedia</p>
+            </a>
+            <a href="https://duckduckgo.com/?q=" target="_blank">
+                <img src="logos/duckduckgo_icon.svg">
+                <p>Duckduckgo</p>
+            </a>
+            <a href="https://www.bing.com/search?q=" target="_blank">
+                <img src="logos/bing_icon.svg">
+                <p>Bing</p>
+            </a>
+            <a href="https://br.search.yahoo.com/search?p=" target="_blank">
+                <img src="logos/yahoo_logo.svg">
+                <p>Yahoo</p>
+            </a>
+        </div>
+    </div>
+    
+    
+
+</body>
+<script src="script.js"></script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

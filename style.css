@@ -1,0 +1,229 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    margin: 20px;
+}
+body > *{
+    padding: 10px;
+    border: 2px solid black;
+}
+
+
+
+/* CALCULATOR */
+
+#calculator{
+    /*width: 150px;*/
+    width: fit-content;
+    height: fit-content;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+#calc-input{
+    padding: 5px;
+
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+#calc-button-del{
+    grid-column: 4;
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+#calc-button-result{
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+
+
+
+/* CROSS MULTIPLICATION */
+
+#cross-multiplication{
+    /*width: 300px;*/
+    width: fit-content;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+#cross-multiplication > *{
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+}
+.cross-multi-sections > *{
+    width: 33%;
+
+    text-align: center;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#cross-multi-result{
+    background-color: lightgray;
+    font-weight: bolder;
+}
+
+
+
+/* TRANSLATOR */
+
+#translator{
+    /*width: 450px;*/
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.translator-sections{
+    display: flex;
+    justify-content: space-between;
+}
+.translator-sections input{
+    padding: 5px;
+}
+
+
+
+/* TIME */
+
+#time{
+    /*width: 520px;*/
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+#clock{
+    background-color: lightgray;
+    width: 200px;
+    height: 200px;
+
+    border-radius: 50%;
+    position: relative;
+}
+#clock-center{
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    z-index: 20;
+    bottom: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, 50%);
+}
+.clock-num{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    padding: 5px;
+}
+#clock-num-1{transform: rotate(30deg);}
+#clock-num-2{transform: rotate(60deg);}
+#clock-num-3{transform: rotate(90deg);}
+#clock-num-4{transform: rotate(120deg);}
+#clock-num-5{transform: rotate(150deg);}
+#clock-num-6{transform: rotate(180deg);}
+#clock-num-7{transform: rotate(210deg);}
+#clock-num-8{transform: rotate(240deg);}
+#clock-num-9{transform: rotate(270deg);}
+#clock-num-10{transform: rotate(300deg);}
+#clock-num-11{transform: rotate(330deg);}
+#clock-num-12{transform: rotate(0deg);}
+.clock-pointer{
+    --rotation: 0deg;
+
+    position: absolute;
+    background-color: black;
+    height: 38%;
+    width: 2%;
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%) rotate(calc(var(--rotation)));
+    transform-origin: bottom;
+}
+#clock-pointer-h{
+    transform: translateX(-50%) rotate(0deg);
+
+    height: 27%;
+}
+#clock-pointer-m{
+    transform: translateX(-50%) rotate(0deg);
+
+    width: 1.5%;
+}
+#clock-pointer-s{
+    transform: translateX(-50%) rotate(0deg);
+
+    width: 1%;
+    height: 36%;
+    background-color: red;
+}
+
+#full-date{
+    width: fit-content;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#full-date > :first-child{
+    font-size: 62px;
+}
+#full-date > :nth-child(2){
+    font-size: 18px;
+}
+
+
+
+/* SEARCH */
+
+#search{
+    width: fit-content;
+}
+
+#search-sites{
+    display: flex;
+    gap: 20px;
+}
+#search-sites a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+}
+#search-sites img{
+    padding: 5px;
+    width: 100%;
+}
