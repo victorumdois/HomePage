@@ -23,4 +23,4 @@ Conjunto de 5 ferramentas feitas em Javascript, com o objetivo de colocar em uma
  Reaproveitado do repositório [Buscador](https://github.com/victorumdois/Buscador).
 
 ---
-## Link para acessar o projeto: https://victorumdois.github.io/HomePage/
+## Link para acessar o projeto: https://victorumdois.github.io/ferramentas-homepage/
